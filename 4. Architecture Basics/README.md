@@ -35,8 +35,7 @@ WRITE IT AGAIN SUCH THAT IT ACHIEVES:
 * No fully connected layer
 * To learn how to add different things we covered in this session, you can refer to this code: [Kaggle](https://www.kaggle.com/enwei26/mnist-digits-pytorch-cnn-99) DONT COPY ARCHITECTURE, JUST LEARN HOW TO INTEGRATE THINGS LIKE DROPOUT, BATCHNORM, ETC.
 
-**Note:**
-This is a slightly time-consuming assignment, please make sure you start early. You are going to spend a lot of effort into running the programs multiple times
+**Note:** This is a slightly time-consuming assignment, please make sure you start early. You are going to spend a lot of effort into running the programs multiple times
 Once you are done, submit your results in S4-Assignment-Solution
 You must upload your assignment to a public GitHub Repository. Create a folder called S4 in it, and add your iPynb code in it. THE LOGS MUST BE VISIBLE. Before adding the link to the submission make sure you have opened the file in an "incognito" window. 
 If you misrepresent your answers, you will be awarded -100% of the score.
@@ -51,9 +50,10 @@ I developed two Architecture, the first one was very amibitious, I wanted to dev
 
 ### Architecture
 
-<div align="center">
-<img_src = "https://github.com/KillerStrike17/EVA-5/blob/master/4.%20Architecture%20Basics/Assets/Model_1_Architecture.jpg?raw=true"/>
-</div>
+<p align="center">
+  <img src="https://github.com/KillerStrike17/EVA-5/blob/master/4.%20Architecture%20Basics/Assets/Model_1_Architecture.jpg?raw=True">
+</p>
+
 
 Here I have created 4 blocks i.e. 2 x Convolution Block, 1 X Transition Block and Global Average Pooling block. Each Convolution Block has a convolution layer, ReLU activation function, Batch Normalization layer and Dropout layer. Each Transition block has a point wise convolution layer followed by Max Pooling layer. The Global Average pooling block has an Average Pool 2d Layer followed by pointwise convolution layer. Here I have used Dropout of 0.05. Here all the kernels used are of size 3x3. The batch size is 128 and SGD is used as an optimizer with default settings. 
 
@@ -67,9 +67,10 @@ The model is learning slow, The model is not able to cross 99.3 % training accur
 
 ### Architecture
 
-<div align="center">
-<img_src = "https://github.com/KillerStrike17/EVA-5/blob/master/4.%20Architecture%20Basics/Assets/Model_2_Architecture.jpg?raw=True"/>
-</div>
+<p align="center">
+  <img src="https://github.com/KillerStrike17/EVA-5/blob/master/4.%20Architecture%20Basics/Assets/Model_2_Architecture.jpg?raw=True">
+</p>
+
 
 So based on the observations of the previous model, I was able to decide that I need to increase my receptive field and need some more parameters as we are bounded by the no Augmentation and No LR scehduling constraint. Hence after some tweeking I chose the above architecture which performs really well, it gives a validation accuracy of 99.5% in 17200 paramters with dropout value set to 0.1 and default SGD optimizer
 
