@@ -51,11 +51,59 @@ I developed two Architecture, the first one was very amibitious, I wanted to dev
 
 ### Architecture
 
+<div align="center">
 ![Model1 Architecture](Assets/Model_1_Architecture.jpg)
+</div>
+
+Here I have created 4 blocks i.e. 2 x Convolution Block, 1 X Transition Block and Global Average Pooling block. Each Convolution Block has a convolution layer, ReLU activation function, Batch Normalization layer and Dropout layer. Each Transition block has a point wise convolution layer followed by Max Pooling layer. The Global Average pooling block has an Average Pool 2d Layer followed by pointwise convolution layer. Here I have used Dropout of 0.05. Here all the kernels used are of size 3x3. The batch size is 128 and SGD is used as an optimizer with default settings. 
+
+#### Observations
+
+The reason to have only 1 transition block is because of the size of the dataset, the image is very small and we dont two max pooling layers for such small dataset as it will force in losing some values. 
+
+The model is learning slow, The model is not able to cross 99.3 % training accuracy , testing is around 99.1 %. The receptive field of the model is 18x18 forcing the model to look at a partial image and take a decision. Here, this can be improved, resulting in an increase in accuracy as much data will then be look to make results. The model build is pretty good as without any augmentation or LR scheduling the model is able to reach 99.1 % validation accuracy. 
+
+## Model 2
+
+### Architecture
+
+<div align="center">
+![Model2 Architecture](Assets/Model_2_Architecture.jpg)
+</div>
+
+So based on the observations of the previous model, I was able to decide that I need to increase my receptive field and need some more parameters as we are bounded by the no Augmentation and No LR scehduling constraint. Hence after some tweeking I chose the above architecture which performs really well, it gives a validation accuracy of 99.5% in 17200 paramters with dropout value set to 0.1 and default SGD optimizer
 
 
+## Results
 
+### Model 1
 
+Total Parameters = 8668
 
+Best Training Accuracy = 99.26%
 
+Best Testing Accuracy = 99.05%
 
+Dropout = 0.05
+
+**Observations**:
+* Overfitting
+* Less parameters
+* Less receptive field
+
+### Model 2
+
+Total Parameters = 17200
+
+Best Training Accuracy = 98.72%
+
+Best Testing Accuracy = 99.50%
+
+Dropout = 0.1
+
+**Observations**:
+* Underfitting (going to hard on the training)
+* Great Validaiton accuracy.
+
+---
+<h3 align="center">Made with ❤ by KillerStrike</h3>
