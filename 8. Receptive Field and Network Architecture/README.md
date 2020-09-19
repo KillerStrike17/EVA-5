@@ -34,7 +34,7 @@ The Models can be found [here](https://github.com/KillerStrike17/PyDeNN/tree/mas
 
 <div align="center">
   <center>
-    <img src="Assets/Model_Architecture.png">
+    <img src="Assets/Model_Architecture.PNG">
   </center>
 </div>
 
