@@ -1,0 +1,8 @@
+ffmpeg -i "C:\Users\this pc\Downloads\Nearly 9,000 Construction Workers Jobless Due To Pandemic.mp4" "C:\Users\this pc\Downloads\frames\out-%05d.jpg"
+
+python detect.py --source "C:\Users\this pc\Downloads\frames" --output "C:\Users\this pc\Downloads\output2"
+
+python detect.py --source "C:\Users\this pc\Downloads\frames" --output "C:\Users\this pc\Downloads\output"
+
+
+ffmpeg -framerate 24 -i "C:\Users\this pc\Downloads\output\out-%04d.jpg" "C:\Users\this pc\Downloads\output_video\output3.mp4"
