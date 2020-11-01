@@ -51,7 +51,7 @@ I developed two Architecture, the first one was very amibitious, I wanted to dev
 ### Architecture
 
 <p align="center">
-  <img src="https://github.com/KillerStrike17/EVA-5/blob/master/4.%20Architecture%20Basics/Assets/Model_1_Architecture.jpg?raw=True">
+  <img src="Assets/Model_1_Architecture.jpg">
 </p>
 
 
@@ -68,7 +68,7 @@ The model is learning slow, The model is not able to cross 99.3 % training accur
 ### Architecture
 
 <p align="center">
-  <img src="https://github.com/KillerStrike17/EVA-5/blob/master/4.%20Architecture%20Basics/Assets/Model_2_Architecture.jpg?raw=True">
+  <img src="Assets/Model_2_Architecture.jpg">
 </p>
 
 
